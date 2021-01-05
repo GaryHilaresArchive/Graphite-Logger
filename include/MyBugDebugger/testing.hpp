@@ -1,30 +1,50 @@
 #pragma once
 #include <iostream>
+#include "hidden.hpp"
+
+#undef __hidden__AX32WFAJP
 
 namespace myBugDebugger
 {
     namespace testing
     {
-        template<typename T>
         class testcase
         {
         private:
-            T actualOutput;
-            T expectedOutput;
+            std::string message;
+            bool accepted;
         public:
-            testcase(const T& actualOutput,const T& expectedOutput)
+            template<typename First>
+            std::string getArguments(int n, First first)
             {
-                this->actualOutput = actualOutput;
-                this->expectedOutput = expectedOutput;
+                n++;
+                return "Argument " + std::to_string(n) + ": " + myBugDebugger::__hidden__AX32WFAJP::convertToString(first) + ".\n";
             }
-            bool accepted()
+
+            template<typename First, typename... Args>
+            std::string getArguments(int n, First first, Args... args)
             {
-                return this->actualOutput == this->expectedOutput;
+                n++;
+                return "Argument " + std::to_string(n) + ": " + myBugDebugger::__hidden__AX32WFAJP::convertToString(first) + ".\n" + getArguments(n,args...);
             }
-            std::string message()
+            template<typename callable, typename T, typename... _Args>
+            testcase(callable f, T expectedOutput, _Args&&... args)
             {
-                return (std::string) "----------------\n    TESTCASE    \n----------------\nAccepted: " + (this->accepted() ? "Yes":"No") + "\n";
+                static_assert(std::is_same<decltype(f(args...)),decltype(expectedOutput)>::value,"The return type is not of the same type that the expected output.");
+                T actualOutput = f(args...);
+                this->accepted = actualOutput == expectedOutput;
+                this->message = (std::string) "---Testcase---\n" + "Arguments:\n" + getArguments(0,args...) + "Expected Output: " + myBugDebugger::__hidden__AX32WFAJP::convertToString(expectedOutput) + ".\nActual Output: " + myBugDebugger::__hidden__AX32WFAJP::convertToString(actualOutput) + ".\nAccepted: " + (this->accepted ? "Yes":"No") + "\n--------------\n";
+            }
+            std::string getMessage() const
+            {
+                return this->message;
+            }
+            bool isAccepted() const
+            {
+                return this->accepted;
             }
         };
     }
 }
+
+#define __hidden__AX32WFAJP __hidden__
