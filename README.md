@@ -1,7 +1,7 @@
 # MyBugDebugger
 Simple header only library for debugging.
 
-## Project open to contributions!
+## Project is open to contributions!
 
 ## Testing
 ### `myBugDebugger::testing::testcase` (class)
