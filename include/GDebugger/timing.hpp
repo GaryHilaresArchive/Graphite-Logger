@@ -1,7 +1,7 @@
 #pragma once
 #include <ctime>
 
-namespace myBugDebugger
+namespace GDebugger
 {
     namespace timing
     {

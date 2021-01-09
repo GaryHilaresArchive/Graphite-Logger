@@ -1,11 +1,23 @@
 #include <vector>
 #include <sstream>
 
-namespace myBugDebugger
+namespace GDebugger
 {
     namespace __hidden__AX32WFAJP
     {
-        template <int I> struct choice : choice<I+1> { };
+        template<typename T, typename = typename std::enable_if<std::is_same<std::ostream*,decltype(&operator<<(std::cout,T()))>::value>::type>
+        std::string printIfPossible(std::ostream& stream, T val)
+        {
+            stream << val;
+            return "";
+        }
+        template<typename T>
+        std::string printIfPossible(std::ostream& stream, ...)
+        {
+            stream << "(Not printable)";
+            return "";
+        }
+        template <int I> struct choice : choice<I+1> {};
         template <> struct choice<10> {};
 
         template <class T> std::string convertToString(T const& t);
@@ -36,6 +48,7 @@ namespace myBugDebugger
                     str += ", ";
             }
             str += "}";
+            std::ostringstream stream;
             return str;
         }
         template <class T>
@@ -49,17 +62,23 @@ namespace myBugDebugger
             ss >> str;
             return str;
         }
-
-        template <class T>
+        template<class T>
         std::string convertToStringHelper(T const& t, choice<4>)
+        {
+            std::ostringstream ss;
+            ss << t;
+            return ss.str();
+        }
+        template <class T>
+        std::string convertToStringHelper(T const& t, choice<5>)
         {
             return "Not representable";
         }
-
         template <typename T>
         std::string convertToString(T const& t) {
             return convertToStringHelper(t, choice<0>{});
         }
+
     }
     namespace __hidden__
     {
