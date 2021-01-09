@@ -1,5 +1,5 @@
-# MyBugDebugger
-MyBugDebugger: Simple header only library for debugging.
+# GDebugger
+GDebugger: Simple header only library for debugging.
 
 ## Project is open to contributions!
 
