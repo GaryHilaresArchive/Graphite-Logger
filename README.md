@@ -1,5 +1,5 @@
 # GDebugger
-GDebugger: Simple header only library for debugging.
+GDebugger: Simple header only debugging tools library.
 
 ## Project is open to contributions!
 
@@ -9,35 +9,35 @@ GDebugger: Simple header only library for debugging.
 
 ## Files
 
-### myBugDebugger/all.hpp
+### GDebugger/all.hpp
 
 Includes:
 - Testing.
 - Timing.
 - Logging.
 
-### myBugDebugger/testing.hpp
+### GDebugger/testing.hpp
 
 Includes:
 -Testing.
 
-### myBugDebugger/logging.hpp
+### GDebugger/logging.hpp
 
 Includes:
 - Logging.
 
-### myBugDebugger/timing.hpp
+### GDebugger/timing.hpp
 
 Includes:
 - Timing.
 
-### myBugDebugger/hidden.hpp
+### GDebugger/hidden.hpp
 
 Includes nothing.
 
 ## Sections
 ### Testing
-#### `myBugDebugger::testing::testcase` (class)
+#### `GDebugger::testing::testcase` (class)
 
 ##### Public Methods
 `template<typename callable, typename T, typename... _Args> testcase(callable f, T expectedOutput, _Args&&... args)` (ctor.) -> Creates a testcase with the function, expected output and arguments provided.
@@ -51,7 +51,7 @@ Includes nothing.
 Not public members.
 
 ### Logging
-#### `myBugDebugger::logging::logger` (class)
+#### `GDebugger::logging::logger` (class)
 
 ##### Public Methods
 
@@ -65,8 +65,18 @@ Not public members.
 
 Not public members.
 
+### `GDebugger::logging::tracker` (class template) **(Experimental)**
+
+##### Public Methods
+
+(This description is WIP).
+
+##### Public Members
+
+Not public Members
+
 ### Timing
-#### `myBugDebugger::timing::timer` (class)
+#### `GDebugger::timing::timer` (class)
 
 ##### Public Methods
 
