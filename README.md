@@ -1,5 +1,6 @@
 # GDebugger
-GDebugger: Simple header only debugging tools library.
+## Description
+Simple header only debugging tools library.
 
 ## Project is open to contributions!
 
