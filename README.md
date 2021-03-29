@@ -14,8 +14,6 @@ This project plans to be reoriented in the near future and will stop being a deb
 - Scalable.
 - Free.
 - Open-source.
-- Simple.
-- Very readable.
 
 ## Platforms
 - Cross-platform.
