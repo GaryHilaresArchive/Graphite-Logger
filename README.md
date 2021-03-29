@@ -1,9 +1,9 @@
-# GIntegers
-[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/GIntegers?style=for-the-badge)](https://github.com/GaryNLOL/GIntegers/commits/main)
-[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/GIntegers?style=for-the-badge)](https://github.com/GaryNLOL/GIntegers/issues)
-[![badge-license](https://img.shields.io/github/license/GaryNLOL/GIntegers?style=for-the-badge)](https://github.com/GaryNLOL/GIntegers/blob/main/LICENSE)
-[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GIntegers/graphs/contributors)
-[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GIntegers)
+# GDebugger
+[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/commits/main)
+[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/issues)
+[![badge-license](https://img.shields.io/github/license/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/blob/main/LICENSE)
+[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/graphs/contributors)
+[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger)
 
 ## What is GDebugger?
 GDebugger is a logging and debugging library for C++.
