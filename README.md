@@ -6,9 +6,7 @@
 [![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger)
 
 ## What is Graphite Logger?
-Graphite Logger is a logging and debugging library for C++.
-
-This project plans to be reoriented in the near future and will stop being a debugging library to focus on being a logging library, as a source only tool for debugging is not as good as an actual debugger. It name will change to "GLogger".
+Graphite Logger is a logging library for C++.
 
 ### Features
 - Scalable.
