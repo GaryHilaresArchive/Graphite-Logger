@@ -1,22 +1,10 @@
 #include <vector>
 #include <sstream>
 
-namespace GDebugger
+namespace GraphiteLogger
 {
-    namespace __hidden__AX32WFAJP
+    namespace __hidden__
     {
-        template<typename T, typename = typename std::enable_if<std::is_same<std::ostream*,decltype(&operator<<(std::cout,T()))>::value>::type>
-        std::string printIfPossible(std::ostream& stream, T val)
-        {
-            stream << val;
-            return "";
-        }
-        template<typename T>
-        std::string printIfPossible(std::ostream& stream, ...)
-        {
-            stream << "(Not printable)";
-            return "";
-        }
         template <int I> struct choice : choice<I+1> {};
         template <> struct choice<10> {};
 
@@ -80,10 +68,4 @@ namespace GDebugger
         }
 
     }
-    namespace __hidden__
-    {
-
-    }
 }
-
-#define __hidden__AX32WFAJP __hidden__
