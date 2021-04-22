@@ -1,12 +1,12 @@
-# GDebugger
-[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/commits/main)
-[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/issues)
-[![badge-license](https://img.shields.io/github/license/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/blob/main/LICENSE)
-[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger/graphs/contributors)
-[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/GDebugger?style=for-the-badge)](https://github.com/GaryNLOL/GDebugger)
+# Graphite Logger
+[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/commits/main)
+[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/issues)
+[![badge-license](https://img.shields.io/github/license/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/blob/main/LICENSE)
+[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/graphs/contributors)
+[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger)
 
-## What is GDebugger?
-GDebugger is a logging and debugging library for C++.
+## What is Graphite Logger?
+Graphite Logger is a logging and debugging library for C++.
 
 This project plans to be reoriented in the near future and will stop being a debugging library to focus on being a logging library, as a source only tool for debugging is not as good as an actual debugger. It name will change to "GLogger".
 
