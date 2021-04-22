@@ -1,87 +1,68 @@
-# GDebugger
-GDebugger: Simple header only library for debugging.
+# Graphite Logger
+[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/commits/main)
+[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/issues)
+[![badge-license](https://img.shields.io/github/license/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/blob/main/LICENSE)
+[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/graphs/contributors)
+[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger)
 
-## Project is open to contributions!
+## What is Graphite Logger?
+Graphite Logger is a logging library for C++.
 
-- Report a bug or request a feature.
-- Give new ideas for debugging tools.
-- Update function implementation for efficiency.
+### Features
+- Scalable.
+- Free.
+- Open-source.
 
-## Files
+## Platforms
+- Cross-platform.
 
-### myBugDebugger/all.hpp
+## Dependencies
+- None, it just uses the standard C++ library.
 
-Includes:
-- Testing.
-- Timing.
-- Logging.
+## Contributing
+### Pull requests
+We encourage you to make pull requests. To do so, follow those steps:
+1. Clone the repository.
+2. Start the repository in your local computer.
+3. Think about one issue or feature you want to work on or go to the issues sections of GitHub and pick one.
+4. Commit your changes.
+5. Push your changes to your fork.
+6. Create a pull request.
+That's it!
 
-### myBugDebugger/testing.hpp
+### Feature requests
+If you want to request a feature, please do it in the Issues section. Additionally, mark it clearly as a feature request and then provide the maximum details you can. Follow this format:
+```markdown
+## Description:
+Describe your feature clearly.
 
-Includes:
--Testing.
+## Example outputs:
+Explain what is supposed to happen (e. g. what your function should return when is called).
+Post as many examples as you can.
 
-### myBugDebugger/logging.hpp
+## Notes:
+If there is something you must add do it here.
+```
 
-Includes:
-- Logging.
+### Issues
+You're welcome to posts issues. Just use the following format:
+```markdown
+## Description:
+Describe your problem clearly.
 
-### myBugDebugger/timing.hpp
+## Minimal reproducible example:
+Post the minimal piece of code that can reproduce the problem.
 
-Includes:
-- Timing.
+## Expected VS actual output:
+A clear explanation about the output that you expected to obtain and the output you obtained.
 
-### myBugDebugger/hidden.hpp
+## Platform:
+Include your OS.
 
-Includes nothing.
+## Notes:
+If there is something you must add do it here.
+```
 
-## Sections
-### Testing
-#### `myBugDebugger::testing::testcase` (class)
-
-##### Public Methods
-`template<typename callable, typename T, typename... _Args> testcase(callable f, T expectedOutput, _Args&&... args)` (ctor.) -> Creates a testcase with the function, expected output and arguments provided.
-
-`std::string getMessage() const` -> Returns the testcase message including arguments, output and whether it was accepted or not.
-
-`bool isAccepted() const` -> Returns `true` if the testcase was accepted and `false` if not.
-
-##### Public Members
-
-Not public members.
-
-### Logging
-#### `myBugDebugger::logging::logger` (class)
-
-##### Public Methods
-
-`logger(const std::vector<std::ostream*>& outputs = {}, const std::string& name = "Logger")` (ctor.) -> Creates a logger and sets it name and outputs.
-
-`void addOutput(std::ostream* stream)` -> Adds an output for the logger.
-
-`loggerhelper operator<<(Args... args)` -> Sends the message input to all the logger's output.
-
-##### Public Members
-
-Not public members.
-
-### Timing
-#### `myBugDebugger::timing::timer` (class)
-
-##### Public Methods
-
-`timer()` (ctor.) -> Returns a timer.
-
-`bool isRunning() const` -> Returns whether the timer is running or not.
-
-`double getTime() const` -> Returns the transcurred time.
-
-`void start()` -> Starts the timer.
-
-`void stop()` -> Stops the timer.
-
-`void reset()` -> Resets the timer.
-
-##### Public Members
-
-Not public members.
+## Useful links
+- [C++ Style Guide](https://github.com/GaryNLOL/GSS-Language/blob/main/docs/C%2B%2B%20Style%20Guide.md).
+- [Discord Server.](https://discord.gg/RQN6gcDQwX)
