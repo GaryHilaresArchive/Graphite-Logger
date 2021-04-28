@@ -22,10 +22,29 @@ Graphite Logger is a logging library for C++.
 - None, it uses just the standard C++ library.
 
 ## Usage
-Sample code:
+### Installation
+Graphite Logger does not require any spcial installation or building because currently it is a header only library. 
+Graphite Logger just needs to be included in your project. 
+
+To do so, follow these steps:
+1. Download the repository either by cloning it with Git or from the GitHub page.
+2. Move it to either your compiler's include path or to your project's include path.
+3. Include it in your source file.
+If you have put it in the compiler's path, add the following line at the begin of yout code:
+```cpp
+#include <Graphite-Logger/logging.hpp>
+```
+Else, write:
+```cpp
+#include "${your own path}"
+```
+Where "your own path" is the path to the header file.
+
+### Samples
+Using default log levels (same as Linux):
 ```cpp
 #define GRAPHITE_LOGGER__USE_DEFAULT_LOG_LEVELS
-#include >Graphite-Logger/logging.hpp>
+#include <Graphite-Logger/logging.hpp>
 
 int main()
 {
