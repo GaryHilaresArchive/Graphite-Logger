@@ -30,15 +30,15 @@ To do so, follow these steps:
 1. Download the repository either by cloning it with Git or from the GitHub page.
 2. Move it to either your compiler's include path or to your project's include path.
 3. Include it in your source file.
-If you have put it in the compiler's path, add the following line at the begin of yout code:
+- If you have put it in the compiler's path, add the following line at the begin of yout code:
 ```cpp
 #include <Graphite-Logger/logging.hpp>
 ```
-Else, write:
+- Else, write:
 ```cpp
 #include "${your own path}"
 ```
-Where "your own path" is the path to the header file.
+- Where "your own path" is the path to the header file.
 
 ### Samples
 Using default log levels (same as Linux):
