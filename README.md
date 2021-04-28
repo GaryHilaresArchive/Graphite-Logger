@@ -1,9 +1,11 @@
-# Graphite Logger
-[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/commits/main)
+<h1 align="center">Graphite Logger</h1>
+<p align="center">
+<img alt="badge-lastcommit" src="https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge">
 [![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/issues)
 [![badge-license](https://img.shields.io/github/license/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/blob/main/LICENSE)
 [![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/graphs/contributors)
 [![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger)
+</p>
 
 ## What is Graphite Logger?
 Graphite Logger is a logging library for C++.
