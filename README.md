@@ -17,7 +17,7 @@ Graphite Logger is a logging library for C++.
 - Cross-platform.
 
 ## Dependencies
-- None, it just uses the standard C++ library.
+- None, it uses just the standard C++ library.
 
 ## Usage
 Sample code:
