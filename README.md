@@ -14,6 +14,7 @@ Graphite Logger is a logging library for C++.
 - Scalable.
 - Free.
 - Open-source.
+- Easy to use. 
 
 ## Platforms
 - Cross-platform.
