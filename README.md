@@ -1,9 +1,11 @@
-# Graphite Logger
-[![badge-lastcommit](https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/commits/main)
-[![badge-openissues](https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/issues)
-[![badge-license](https://img.shields.io/github/license/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/blob/main/LICENSE)
-[![badge-contributors](https://img.shields.io/github/contributors/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger/graphs/contributors)
-[![badge-codesize](https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge)](https://github.com/GaryNLOL/Graphite-Logger)
+<h1 align="center">Graphite Logger</h1>
+<p align="center">
+<img alt="badge-lastcommit" src="https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge">
+<img alt="badge-openissues" src="https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge">
+<img alt="badge-license" src="https://img.shields.io/github/license/GaryNLOL/Graphite-Logger?style=for-the-badge">
+<img alt="badge-contributors" src="https://img.shields.io/github/contributors/GaryNLOL/Graphite-Logger?style=for-the-badge">
+<img alt="badge-codesize" src="https://img.shields.io/github/languages/code-size/GaryNLOL/Graphite-Logger?style=for-the-badge">
+</p>
 
 ## What is Graphite Logger?
 Graphite Logger is a logging library for C++.
@@ -12,55 +14,104 @@ Graphite Logger is a logging library for C++.
 - Scalable.
 - Free.
 - Open-source.
+- Easy to use. 
 
 ## Platforms
 - Cross-platform.
 
 ## Dependencies
-- None, it just uses the standard C++ library.
+- None, it uses just the standard C++ library.
 
-## Contributing
-### Pull requests
-We encourage you to make pull requests. To do so, follow those steps:
-1. Clone the repository.
-2. Start the repository in your local computer.
-3. Think about one issue or feature you want to work on or go to the issues sections of GitHub and pick one.
-4. Commit your changes.
-5. Push your changes to your fork.
-6. Create a pull request.
-That's it!
+## Usage
+### Installation
+Graphite Logger does not require any spcial installation or building because currently it is a header only library. 
+Graphite Logger just needs to be included in your project. 
 
-### Feature requests
-If you want to request a feature, please do it in the Issues section. Additionally, mark it clearly as a feature request and then provide the maximum details you can. Follow this format:
-```markdown
-## Description:
-Describe your feature clearly.
+To do so, follow these steps:
+1. Download the repository either by cloning it with Git or from the GitHub page.
+2. Move it to either your compiler's include path or to your project's include path.
+3. Include it in your source file.
+- If you have put it in the compiler's path, add the following line at the begin of yout code:
+```cpp
+#include <Graphite-Logger/logging.hpp>
+```
+- Else, write:
+```cpp
+#include "${your own path}"
+```
+- Where "your own path" is the path to the header file.
 
-## Example outputs:
-Explain what is supposed to happen (e. g. what your function should return when is called).
-Post as many examples as you can.
+### Samples
+Using default log levels (same as Linux):
+```cpp
+#define GRAPHITE_LOGGER__USE_DEFAULT_LOG_LEVELS
+#include <Graphite-Logger/logging.hpp>
 
-## Notes:
-If there is something you must add do it here.
+int main()
+{
+    using namespace GraphiteLogger::LogLevels;
+    GraphiteLogger::Logger logger("UsefulLogger",debug);
+    logger.addOutput(&std::cout);
+    logger[emergency] << "Terminating program... Exit code: " << 4;
+    logger[critical] << "Undefined behaviour detected.";
+    logger[error] << "atoi() cannot transform \"479878754524347787864456546\" (out of range).";
+    logger[warning] << "Comparison of integers of different flavors.";
+    logger[notice] << "Pass by const reference would be more efficient than past by value";
+    logger[info] << "Exited struggleFunction() successfully.";
+    logger[debug] << "i is " << 1;
+}
 ```
 
-### Issues
-You're welcome to posts issues. Just use the following format:
-```markdown
-## Description:
-Describe your problem clearly.
+Using own levels:
+```cpp
+#include <Graphite-Logger/logging.hpp>
 
-## Minimal reproducible example:
-Post the minimal piece of code that can reproduce the problem.
+int main()
+{
+    constexpr int my_own_level_1 = 4;
+    constexpr int my_own_level_2 = 5;
+    constexpr int my_own_level_3 = 6;
+    GraphiteLogger::Logger logger("UsefulLogger",my_own_level_2);
+    logger.addOutput(&std::cout);
+    logger[my_own_level_1] << "Some important data that will be shown.";
+    logger[my_own_level_2] << "Some not as important data that will be shown.";
+    logger[my_own_level_3] << "Some data that will not be shown.";
+}
+```
 
-## Expected VS actual output:
-A clear explanation about the output that you expected to obtain and the output you obtained.
+Logging to files:
+```cpp
+#include <Graphite-Logger/logging.hpp>
 
-## Platform:
-Include your OS.
+int main()
+{
+    constexpr int my_own_level_1 = 4;
+    constexpr int my_own_level_2 = 5;
+    constexpr int my_own_level_3 = 6;
+    GraphiteLogger::Logger logger("UsefulLogger",my_own_level_2);
+    std::ofstream ofile("out.log");
+    logger.addOutput(&ofile);
+    logger[my_own_level_1] << "Some important data that will be shown.";
+    logger[my_own_level_2] << "Some not as important data that will be shown.";
+    logger[my_own_level_3] << "Some data that will not be shown.";
+}
+```
 
-## Notes:
-If there is something you must add do it here.
+Logging to multiple outputs:
+```cpp
+#include <Graphite-Logger/logging.hpp>
+
+int main()
+{
+    constexpr int my_own_level_1 = 4;
+    std::ofstream ofile1("out1.log");
+    GraphiteLogger::Logger logger("UsefulLogger",my_own_level_1,{&std::cout,&ofile1});
+    std::ofstream ofile2("out2.log");
+    std::ofstream ofile3("out3.log");
+    logger.addOutput(&ofile2);
+    logger.addOutput(&ofile3);
+    logger[my_own_level_1] << "Logging to ofile1, ofile2, ofile3 and to std::cout!";
+}
 ```
 
 ## Useful links
