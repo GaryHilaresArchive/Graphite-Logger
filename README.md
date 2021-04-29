@@ -8,7 +8,7 @@
 </p>
 
 ## What is Graphite Logger?
-Graphite Logger is a logging library for C++.
+Graphite Logger is a simple, one-header-only logging library for C++.
 
 ### Features
 - Scalable.
