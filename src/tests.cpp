@@ -13,7 +13,7 @@ int main()
     logger[my_own_level_3] << "Some data that will not be shown.";
 
     using namespace GraphiteLogger::LogLevels;
-    logger = GraphiteLogger::Logger("UsefulLogger",critical);
+    logger.setLogLevel(critical);
     logger[emergency] << "Terminating program... Exit code: " << 4;
     logger[critical] << "Undefined behaviour detected.";
     logger[error] << "atoi() cannot transform \"479878754524347787864456546\" (out of range).";

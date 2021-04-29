@@ -74,6 +74,10 @@ namespace GraphiteLogger
         {
             this->outputs.push_back(stream);
         }
+        void setLogLevel(int new_log_level)
+        {
+            this->log_level = new_log_level;
+        }
         LoggerHelper operator[](int message_log_level)
         {
             if(this->log_level < message_log_level)
