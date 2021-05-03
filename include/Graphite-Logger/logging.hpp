@@ -1,10 +1,10 @@
 #pragma once
+#include <array>
+#include <ctime>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
-#include <ctime>
-#include <array>
-#include <sstream>
 
 namespace GraphiteLogger
 {
