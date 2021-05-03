@@ -20,7 +20,7 @@ Graphite Logger is a simple, one-header-only logging library for C++.
 - Cross-platform.
 
 ## Dependencies
-- None, it uses just the standard C++ library.
+- Standard C++ 11 compiler and library support.
 
 ## Usage
 ### Installation
