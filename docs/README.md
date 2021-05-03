@@ -1,5 +1,4 @@
-<h1 align="center">Graphite Logger</h1>
-<img alt="logo" src="https://github.com/GaryNLOL/Graphite-Logger/blob/main/images/logo.png">
+<p align="center"><img alt="logo" src="https://github.com/GaryNLOL/Graphite-Logger/blob/main/images/logo.png"></p>
 <p align="center">
 <img alt="badge-lastcommit" src="https://img.shields.io/github/last-commit/GaryNLOL/Graphite-Logger?style=for-the-badge">
 <img alt="badge-openissues" src="https://img.shields.io/github/issues-raw/GaryNLOL/Graphite-Logger?style=for-the-badge">
