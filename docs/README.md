@@ -116,5 +116,6 @@ int main()
 ```
 
 ## Useful links
-- [C++ Style Guide](https://github.com/GaryNLOL/GSS-Language/blob/main/docs/C%2B%2B%20Style%20Guide.md).
+- [Contributing Guidelines](https://github.com/GaryNLOL/Graphite-Logger/blob/main/docs/CONTRIBUTING.md)
+- [Project's Style Guide](https://github.com/GaryNLOL/Style-Guides/).
 - [Discord Server.](https://discord.gg/RQN6gcDQwX)
