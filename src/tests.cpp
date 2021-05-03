@@ -1,5 +1,5 @@
 #define GRAPHITE_LOGGER__USE_DEFAULT_LOG_LEVELS
-#include "../include/Graphite-Logger/logging.hpp"
+#include "../include/GraphiteLogger/GraphiteLogger.hpp"
 
 int main()
 {
