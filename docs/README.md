@@ -33,13 +33,13 @@ To do so, follow these steps:
 3. Include it in your source file.
 - If you have put it in the compiler's path, add the following line at the begin of yout code:
 ```cpp
-#include <Graphite-Logger/logging.hpp>
+#include <GraphiteLogger/GraphiteLogger.hpp>
 ```
 - Else, write:
 ```cpp
-#include "${your own path}"
+#include "${your own path}/GraphiteLogger/GraphiteLogger.hpp"
 ```
-- Where "your own path" is the path to the header file.
+- Where "your own path" is the path to the directory where you have Graphite Logger.
 
 ### Samples
 Using default log levels (same as Linux):
