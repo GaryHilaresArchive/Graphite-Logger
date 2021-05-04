@@ -99,7 +99,7 @@ int main()
 
 Logging to multiple outputs:
 ```cpp
-#include <Graphite-Logger/logging.hpp>
+#include <GraphiteLogger/GraphiteLogger.hpp>
 
 int main()
 {
