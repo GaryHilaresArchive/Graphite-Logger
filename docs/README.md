@@ -39,7 +39,7 @@ To do so, follow these steps:
 ```cpp
 #include "${your own path}/GraphiteLogger/GraphiteLogger.hpp"
 ```
-- Where "your own path" is the path to the directory where you have Graphite Logger.
+- Where "your own path" is the path to the directory where you have Graphite Logger include files.
 
 ### Samples
 Using default log levels (same as Linux):
