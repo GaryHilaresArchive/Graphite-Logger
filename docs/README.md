@@ -45,7 +45,7 @@ To do so, follow these steps:
 Using default log levels (same as Linux):
 ```cpp
 #define GRAPHITE_LOGGER__USE_DEFAULT_LOG_LEVELS
-#include <Graphite-Logger/logging.hpp>
+#include <GraphiteLogger/GraphiteLogger.hpp>
 
 int main()
 {
@@ -64,7 +64,7 @@ int main()
 
 Using own levels:
 ```cpp
-#include <Graphite-Logger/logging.hpp>
+#include <GraphiteLogger/GraphiteLogger.hpp>
 
 int main()
 {
@@ -81,7 +81,7 @@ int main()
 
 Logging to files:
 ```cpp
-#include <Graphite-Logger/logging.hpp>
+#include <GraphiteLogger/GraphiteLogger.hpp>
 
 int main()
 {
